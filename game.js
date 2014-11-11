@@ -1,13 +1,17 @@
-var inputBox = document.querySelector('#action');
+player[action](object)
 
-console.log( inputBox.tagName );
-console.log( inputBox.parentNode.tagName );
+function interpret (str){
+var trimmedStr = str.trim(),
+var parts = trimmedStr.split('')
+var action = parts.shift();
+return [action, parts.join('')];
+}
 
-var outputBox = document.querySelector('#scene');
+function execute = 
 
-console.log( outputBox.tagName );
-console.log( outPut.parentNode.tagName );
 
-function addHeader ('Title Of My Text Adventure')
-var newHeader = document.createElement ('p')
-var newText = document.CreateparentNode ('Title Of My Text Adventure')
+var item = document.createElement ('li')
+item.textContent = player.items[i]
+list.appendchild(item)
+
+
