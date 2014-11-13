@@ -1,9 +1,8 @@
-player[action](object)
+var player = { items:[ ]; pickUp: function (item){this.items.push(item);}};
 
-function interpret (str){
-var trimmedStr = str.trim(),
-var parts = trimmedStr.split('')
-
+function interpret (input){
+var cmd = input.trim().split('');
+    return cmd;
 }
 
 function execute = []
