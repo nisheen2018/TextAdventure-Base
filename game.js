@@ -1,4 +1,11 @@
 var player = { items:[ ]; pickUp: function (item){this.items.push(item);}};
+drop: function(item){
+	var pos = this.items.indexOf(item);
+	if (pos >= 0) {
+		this.items.splice(pos, 1);
+    }
+  }
+}
 
 function interpret (input) {
 var cmd = input.trim().split('');
@@ -20,18 +27,26 @@ var cmd = interpret (this.value);
     execute (cmd);
     alert ( player.items)
     
-function report = 
+function gameStep (input) {
+	var cmd = interpret(input);
+	var result = execute(cmd); 
+	report(result);
 
 
-function gameStep = (str) {
-  return [execute, interpret, report]
+
+
+var gameStart = function() {
+	var inputBox = document.querySelector("input");
+	inputBox.addEventListener("keyup", function(event){
+		if (event.keyCode === 13) {
+			gameStep(this.value);
+		}
+	});
 }
 
-var item = document.createElement ('li')
-item.textContent = player.items[i]
-list.appendchild(item)
+window.onload = gameStart; 
 
-addEventListener("keyup", function(event) {
-    if (event.keyCode == Enter)
-      document.body = "";
+
+
+
 
