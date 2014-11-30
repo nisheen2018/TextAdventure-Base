@@ -3,20 +3,39 @@ function Locations (name, descripton, items) {
     this.description = description
     this.items = []
  }
-    var locations = []
-    var locations1 = newLocation("Central Park", "Recreational Area Of NYC",)
-    locations.push.location1 
-    var locations2 = newLocation ("Times Square", "Most toured place in NYc")
-    locations.push.location2
-    var location3 = newLocation("Grand Central Terminal", "long-distance passenger rail travel")
-    locations.push.location3
-    
-    var connections = [
-       [0,0,1]
-       [0,1,0]
-       [1,0,0]
+function connect(map, from, to) {
+map.connections[from][to] = 1;
+map.connections[to][from] = 1;
+}
+function disconnect(map, from, to) {
+map.connections[from][to] = 0;
+map.connections[to][from] = 0;
+
+    var map = {
+        locations: [
+     new Location("Central Park", " You end up in the most recreational Area Of NYC",)
+     new Location ("Times Square", "You see shining lights everywhere in the most toured place in NYc")
+     new Location("Grand Central Terminal", " You get off a train")
     ]
     
-    var map = [locations, connections]
+    var connections = [
+       [0,0,0]
+       [0,0,0]
+       [0,0,0]
+    ]
+connect(map, 0, 1);
+connect(map, 1, 2);
+connect(map, 2, 0);
+function testMap() {
+    var m;
+console.log("The " + map.locations[0].name + " is adjacent to:");
+for (m in map.connections[0]) {
+if (map.connections[0][j] === 1) {
+console.log(" the " + map.locations[j].name);
+}
+}
+}
+testMap();
+
     var desiredLocation = prompt ('Where do you want to go?")
     
