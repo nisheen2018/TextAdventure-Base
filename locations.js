@@ -4,19 +4,19 @@ function Locations (name, descripton, items) {
     this.items = []
  }
 function connect(map, from, to) {
-map.connections[from][to] = 1;
-map.connections[to][from] = 1;
+    map.connections[from][to] = 1;
+    map.connections[to][from] = 1;
 }
 function disconnect(map, from, to) {
-map.connections[from][to] = 0;
-map.connections[to][from] = 0;
+    map.connections[from][to] = 0;
+    map.connections[to][from] = 0;
 
-    var map = {
-        locations: [
-     new Location("Central Park", " You end up in the most recreational Area Of NYC",)
-     new Location ("Times Square", "You see shining lights everywhere in the most toured place in NYc")
-     new Location("Grand Central Terminal", " You get off a train")
-    ]
+var map = {
+    locations: [
+        new Location("Central Park", " You end up in the most recreational Area Of NYC",)
+        new Location ("Times Square", "You see shining lights everywhere in the most toured place in NYc")
+        new Location("Grand Central Terminal", " You get off a train")
+    ],
     
     var connections = [
        [0,0,0]
@@ -28,12 +28,12 @@ connect(map, 1, 2);
 connect(map, 2, 0);
 function testMap() {
     var m;
-console.log("The " + map.locations[0].name + " is adjacent to:");
-for (m in map.connections[0]) {
-if (map.connections[0][j] === 1) {
-console.log(" the " + map.locations[j].name);
-}
-}
+    console.log("The " + map.locations[0].name + " is adjacent to:");
+    for (m in map.connections[0]) {
+         if (map.connections[0][j] === 1) {
+             console.log(" the " + map.locations[j].name);
+         }
+    }
 }
 testMap();
 
