@@ -1,10 +1,14 @@
-var player = { items:[ ]; pickUp: function (item){this.items.push(item);}};
-drop: function(item){
-	var pos = this.items.indexOf(item);
-	if (pos >= 0) {
-		this.items.splice(pos, 1);
+var player = {
+    items:[ ],
+    pickUp: function (item){
+        this.items.push(item);
+    },
+    drop: function(item){
+	    var pos = this.items.indexOf(item);
+	    if (pos >= 0) {
+		    this.items.splice(pos, 1);
+        }
     }
-  }
 }
 
 function interpret (input) {
