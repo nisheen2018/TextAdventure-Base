@@ -37,5 +37,5 @@ function testMap() {
 }
 testMap();
 
-    var desiredLocation = prompt ('Where do you want to go?")
+var desiredLocation = prompt ("Where do you want to go?")
     
