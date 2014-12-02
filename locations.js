@@ -48,4 +48,10 @@ function testMap() {
 testMap();
 
 var desiredLocation = prompt ("Where do you want to go?")
+  if (adjMatrix [player.location][desiredLocation] === 1) {
+     player.location = desiredLocation
+ }else{
+    alert ("I'm sorry but you are not permitted to enter there!"); 
+}
+
     
