@@ -50,6 +50,16 @@ testMap();
 var desiredLocation = prompt ("Where do you want to go?")
   if (adjMatrix [player.location][desiredLocation] === 1) {
      player.location = desiredLocation
+ }else if (adjMatrix [player.location][desiredLocation] ===2) {
+     player.location = desiredLocation
+ }else if (adjMatrix [player.location][desiredLocation] ===3) {
+     player.location = desiredLocation
+ }else if (adjMatrix [player.location][desiredLocation] ===4) {
+     player.location = desiredLocation
+ }else if (adjMatrix [player.location][desiredLocation] ===5) {
+     player.location = desiredLocation
+ }else if (adjMatrix [player.location][desiredLocation] ===6) {
+     player.location = desiredLocation
  }else{
     alert ("I'm sorry but you are not permitted to enter there!"); 
 }
