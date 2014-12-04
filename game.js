@@ -11,6 +11,11 @@ var player = {
     }
 }
 
+var items = ["City Map", "Money", "Keys", "Bottle", "Snacks"]
+var items = []
+return items
+
+
 function interpret (input) {
 var cmd = input.trim().split('');
     return cmd;
