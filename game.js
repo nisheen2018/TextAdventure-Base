@@ -11,7 +11,7 @@ var player = {
     }
 }
 
-var items = ["City Map", "Money", "Keys", "Bottle", "Snacks"]
+var items = ["City Map", "Money", "Keys", "Bottle", "Snacks", "BusPass"]
 var items = []
 return items
 
