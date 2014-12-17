@@ -11,5 +11,17 @@ var player = {
   hasSnacks: false
  }
  
+ var items = ["City Map", "Money", "Keys", "Bottle", "Snacks", "BusPass"]
+ 
  function takeItem ( )
-    var itemIndexItem = items.indexOf(item),
+    var itemIndexNumber = items.indexOf(item),
+    if (itemIndexItem !== 1
+    && locations[itemIndexNumber === mapLocation] {
+      gameMessage = "You take the" + item + " " ;
+      
+      items.splice (itemIndexNumber, 1)
+      Locations.splice (itemUndexNumber, 1)
+    } else {
+      gameMessage = "You can't do that.";    
+      
+    }
