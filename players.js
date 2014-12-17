@@ -25,6 +25,15 @@ var player = {
       gameMessage = "You can't do that.";    
       
     }
+    
+    player.drop = function(item) {
+    var pos = this.items.indexOf(item);
+    if (pos >= 0) {
+        this.items.splice(pos, 1);
+    } else {
+        alert ("You don't have the item")
+    }
+};
     switch (item) {
       case "City Map"
       if (mapLocation = 1) {
