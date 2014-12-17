@@ -25,3 +25,16 @@ var player = {
       gameMessage = "You can't do that.";    
       
     }
+    switch (item) {
+      case "City Map"
+      if (mapLocation = 1) {
+        gameMessage = "You will use this map to find your way to the city"
+      } else {
+        gameMessage = " Don't forget to pick up the city map"
+      } break;
+       case "Money"
+       if (mapLocation =2) {
+          gameMessage = "You will need money to get on the bus and for deli shop"
+       } break;
+       
+    }
