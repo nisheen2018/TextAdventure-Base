@@ -1,3 +1,4 @@
+
 var player = {
     items:[ ],
     pickUp: function (item){
@@ -27,6 +28,35 @@ var object = cmd [1];
 var method = player [action];
     method (object);
 }
+
+function report(result) { // note: parameter not currently used
+    displayActions();
+    displayInventory();
+    displayScene();
+}
+function displayActions() {
+    var field, action, actionList;
+    actionList = document.querySelector("#help > ul");
+    clearContent(actionList);
+    for (field in player) {
+        if (player[field] instanceof Function) {
+            action = document.createElement("li");
+            action.textContent = field;
+            actionList.appendChild(action);
+        }
+    }
+}
+function displayInventory() {
+    var i, item, inventory;
+    inventory = document.querySelector("#inventory > ul");
+    clearContent(inventory);
+    for (i in player.items) {
+        item = document.createElement ("li");
+        item.textContent = player.items[i];
+        inventory.appendChild(item);
+    }
+}
+
 var input = document.querySelector ('input');
 input.addEventListener ('keyup', function (event){
     if ( event.keyCode === 13 )
