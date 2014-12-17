@@ -4,7 +4,7 @@ var player = {
   location: null,
   items: [],
   Age: 7,
-  role: "student"
+  role: "lost boy"
   hasBusPass: false
   hasMoney: true
   hasKeys: true
