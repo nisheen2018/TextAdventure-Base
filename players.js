@@ -12,6 +12,9 @@ var player = {
  }
  
  var items = ["City Map", "Money", "Keys", "Bottle", "Snacks", "BusPass"]
+ player.pickUp = function (item) {
+   this.items.push (item);
+ },
  
  function takeItem ( )
     var itemIndexNumber = items.indexOf(item),
@@ -45,5 +48,18 @@ var player = {
        if (mapLocation =2) {
           gameMessage = "You will need money to get on the bus and for deli shop"
        } break;
+       case "Keys"
+       if (mapLocation = 3) {
+         gameMessage = "Use the keys to unlock the secret door"
+       } break;
+       case "Bottle"
+       if (mapLocation = 4) {
+         gameMessage = "Use the bottle to fill up water and reboost your energy"
+       } break;
+       case "BusPass"
+       if (mapLocation = 5) {
+         gameMessage = "You will need this to get to the other side of town"
+        } break; 
+       };
        
-    }
+    };
