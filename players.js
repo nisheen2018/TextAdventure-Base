@@ -5,7 +5,7 @@ var player = {
   items: [],
   Age: 7,
   role: "lost boy"
-  hasBusPass: false
+  hasBusPass: true
   hasMoney: true
   hasKeys: true
   hasSnacks: false
